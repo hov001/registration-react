@@ -1,7 +1,7 @@
 import React from "react";
+import WrapperSection from "../../components/WrapperSection/WrapperSection";
 import RegistrationTitleSection from "../../components/sections/RegistrationTitle/RegistrationTitle.section";
 import RegistrationFormSection from "../../components/sections/RegistrationForm/RegistrationForm.section";
-import WrapperSection from "../../components/WrapperSection/WrapperSection";
 
 export default function Registration ({classNames, classNamesJoin}) {
     return (
@@ -15,8 +15,16 @@ export default function Registration ({classNames, classNamesJoin}) {
                 classNamesJoin={classNamesJoin}
 
             >
-                <RegistrationTitleSection classNamesJoin={classNamesJoin} />
-                <RegistrationFormSection classNamesJoin={classNamesJoin} />
+                <RegistrationTitleSection
+                    classNamesJoin={classNamesJoin}
+                />
+                <RegistrationFormSection
+                    classNames={[
+                        'mt-8',
+                        'space-y-6'
+                    ]}
+                    classNamesJoin={classNamesJoin}
+                />
             </WrapperSection>
         </div>
     )

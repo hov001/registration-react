@@ -11,8 +11,10 @@ class RegistrationFormSection extends React.Component {
     }
 
     render() {
+        const {classNamesJoin, classNames} = this.props
+
         return (
-            <form className="mt-8 space-y-6" onSubmit={this.handleOnSubmit}>
+            <form className={classNamesJoin(classNames)} onSubmit={this.handleOnSubmit}>
                 <input type="hidden" name="remember" defaultValue="true" />
                 <div className="rounded-md shadow-sm -space-y-px">
                     <div>

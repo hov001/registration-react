@@ -1,6 +1,7 @@
 import React from "react";
 import {LockClosedIcon} from "@heroicons/react/solid";
 import Input from "../../Input/Input";
+import WrapperSection from "../../WrapperSection/WrapperSection";
 
 class RegistrationFormSection extends React.Component {
     constructor(props) {
@@ -16,8 +17,21 @@ class RegistrationFormSection extends React.Component {
 
         return (
             <form className={classNamesJoin(classNames)} onSubmit={this.handleOnSubmit}>
-                <input type="hidden" name="remember" defaultValue="true" />
-                <div className="rounded-md shadow-sm -space-y-px">
+                <Input
+                    classNames={[]}
+                    classNamesJoin={classNamesJoin}
+                    name={'remember'}
+                    type={'hidden'}
+                    defaultValue={'true'}
+                />
+                <WrapperSection
+                    classNames={[
+                        'rounded-md',
+                        'shadow-sm',
+                        '-space-y-px'
+                    ]}
+                    classNamesJoin={classNamesJoin}
+                >
                     <Input
                         classNames={[
                             'appearance-none',
@@ -39,23 +53,108 @@ class RegistrationFormSection extends React.Component {
                             'sm:text-sm'
                         ]}
                         classNamesJoin={classNamesJoin}
+                        name={'firstName'}
+                        type={'text'}
+                        placeholder={'First name'}
+                    />
+                    <Input
+                        classNames={[
+                            'appearance-none',
+                            'rounded-none',
+                            'relative',
+                            'block',
+                            'w-full',
+                            'px-3',
+                            'py-2',
+                            'border',
+                            'border-gray-300',
+                            'placeholder-gray-500',
+                            'text-gray-900',
+                            'focus:outline-none',
+                            'focus:ring-indigo-500',
+                            'focus:border-indigo-500',
+                            'focus:z-10',
+                            'sm:text-sm'
+                        ]}
+                        classNamesJoin={classNamesJoin}
+                        name={'lastName'}
+                        type={'text'}
+                        placeholder={'Last name'}
+                    />
+                    <Input
+                        classNames={[
+                            'appearance-none',
+                            'rounded-none',
+                            'relative',
+                            'block',
+                            'w-full',
+                            'px-3',
+                            'py-2',
+                            'border',
+                            'border-gray-300',
+                            'placeholder-gray-500',
+                            'text-gray-900',
+                            'focus:outline-none',
+                            'focus:ring-indigo-500',
+                            'focus:border-indigo-500',
+                            'focus:z-10',
+                            'sm:text-sm'
+                        ]}
+                        classNamesJoin={classNamesJoin}
                         name={'email'}
                         type={'email'}
                         placeholder={'Email address'}
                     />
-                    <div>
-                        <input
-                            id="password"
-                            name="password"
-                            type="password"
-                            autoComplete="current-password"
-                            required
-                            className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                            placeholder="Password"
-                        />
-                    </div>
-                </div>
-
+                    <Input
+                        classNames={[
+                            'appearance-none',
+                            'rounded-none',
+                            'relative',
+                            'block',
+                            'w-full',
+                            'px-3',
+                            'py-2',
+                            'border',
+                            'border-gray-300',
+                            'placeholder-gray-500',
+                            'text-gray-900',
+                            'focus:outline-none',
+                            'focus:ring-indigo-500',
+                            'focus:border-indigo-500',
+                            'focus:z-10',
+                            'sm:text-sm'
+                        ]}
+                        classNamesJoin={classNamesJoin}
+                        name={'password'}
+                        type={'password'}
+                        placeholder={'Password'}
+                    />
+                    <Input
+                        classNames={[
+                            'appearance-none',
+                            'rounded-none',
+                            'relative',
+                            'block',
+                            'w-full',
+                            'px-3',
+                            'py-2',
+                            'border',
+                            'border-gray-300',
+                            'placeholder-gray-500',
+                            'text-gray-900',
+                            'rounded-b-md',
+                            'focus:outline-none',
+                            'focus:ring-indigo-500',
+                            'focus:border-indigo-500',
+                            'focus:z-10',
+                            'sm:text-sm'
+                        ]}
+                        classNamesJoin={classNamesJoin}
+                        name={'password'}
+                        type={'password'}
+                        placeholder={'Confirm password'}
+                    />
+                </WrapperSection>
                 <div className="flex items-center justify-between">
                     <div className="flex items-center">
                         <input

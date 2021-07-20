@@ -1,20 +1,34 @@
 import React from "react";
+import TitleImage from "./TitleImage/TitleImage";
+import TitleDescription from "./TitleDescription/TitleDescription";
+import titleContent from "../../../data/titleContent.data";
 
-export default function RegistrationTitleSection () {
+const {titleImg, titleImgAlt, description} = titleContent
+
+export default function RegistrationTitleSection ({classNamesJoin}) {
     return (
         <div>
-            <img
-                className="mx-auto h-12 w-auto"
-                src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                alt="Workflow"
+            <TitleImage
+                classNames={[
+                    'mx-auto',
+                    'h-12',
+                    'w-auto'
+                ]}
+                classNamesJoin={classNamesJoin}
+                img={titleImg}
+                imgAlt={titleImgAlt}
             />
-            <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Sign in to your account</h2>
-            <p className="mt-2 text-center text-sm text-gray-600">
-                Or{' '}
-                <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
-                    start your 14-day free trial
-                </a>
-            </p>
+            <TitleDescription
+                classNames={[
+                    'mt-6',
+                    'text-center',
+                    'text-3xl',
+                    'font-extrabold',
+                    'text-gray-900'
+                ]}
+                classNamesJoin={classNamesJoin}
+                description={description}
+            />
         </div>
     )
 }
